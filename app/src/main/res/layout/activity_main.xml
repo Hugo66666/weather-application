@@ -195,6 +195,7 @@
                 app:srcCompat="@drawable/rainy_small" />
 
             <TextView
+                android:id="@+id/day1"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:gravity="center"
@@ -218,6 +219,7 @@
                 app:srcCompat="@drawable/partly_sunny_small" />
 
             <TextView
+                android:id="@+id/day2"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:gravity="center"
@@ -240,6 +242,7 @@
                 app:srcCompat="@drawable/windy_small" />
 
             <TextView
+                android:id="@+id/day3"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:gravity="center"
@@ -262,13 +265,14 @@
                 app:srcCompat="@drawable/sunny_small" />
 
             <TextView
+                android:id="@+id/day4"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:gravity="center"
                 android:text="fri"
-                android:textStyle="bold"
                 android:textAllCaps="true"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:textStyle="bold" />
 
         </LinearLayout>
     </LinearLayout>

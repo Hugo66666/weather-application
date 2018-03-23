@@ -28,11 +28,12 @@ public class MainActivity extends AppCompatActivity {
     private static String mYear;
     private static String mMonth;
     private static String mDay;
-
+    String[] zhouji = new String[]{"SUN","MON","TUE","WEN","THU","FRI","SAT"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         Button refresh_but = (Button) findViewById(R.id.refresh);
         final TextView xingqi = (TextView) findViewById(R.id.xingqi);
@@ -51,18 +52,25 @@ public class MainActivity extends AppCompatActivity {
                 mDay = String.valueOf(c.get(Calendar.DAY_OF_MONTH));          // 获取当前月份的日期号码      day
                 mWay = String.valueOf(c.get(Calendar.DAY_OF_WEEK));
                 if("1".equals(mWay)){
+                    setDay(1);
                     xingqi.setText("SUNDAY");
                 }else if("2".equals(mWay)){
+                    setDay(2);
                     xingqi.setText("MONDAY");
                 }else if("3".equals(mWay)){
+                    setDay(3);
                     xingqi.setText("TUESDAY");
                 }else if("4".equals(mWay)){
+                    setDay(4);
                     xingqi.setText("WENDNESDAY");
                 }else if("5".equals(mWay)){
+                    setDay(5);
                     xingqi.setText("THURSDAY");
                 }else if("6".equals(mWay)){
+                    setDay(6);
                     xingqi.setText("FRIDAY");
                 }else if("7".equals(mWay)){
+                    setDay(7);
                     xingqi.setText("SATURDAY");
                 }
                 myDate.setText(mMonth+"/"+mDay+"/"+mYear);   //03/03/2018
@@ -173,5 +181,23 @@ public class MainActivity extends AppCompatActivity {
             }
         }).start();
 
+    }
+
+
+    //设置星期显示的函数
+    public void setDay(int d){
+        int temp=d-1;
+        TextView t1 = (TextView)findViewById(R.id.day1);
+        TextView t2 = (TextView)findViewById(R.id.day2);
+        TextView t3 = (TextView)findViewById(R.id.day3);
+        TextView t4 = (TextView)findViewById(R.id.day4);
+
+        t1.setText(zhouji[temp]);
+        temp++;  if(temp>6)  temp=0;
+        t2.setText(zhouji[temp]);
+        temp++;  if(temp>6)  temp=0;
+        t3.setText(zhouji[temp]);
+        temp++;  if(temp>6)  temp=0;
+        t4.setText(zhouji[temp]);
     }
 }
