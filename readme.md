@@ -1,5 +1,7 @@
-# Assignment 001
-student: Hugo(刘雨果)       Student Number: 20151631
+﻿# Assignment 001
+student: Hugo(刘雨果)
+![Weather](display/display.gif)
+       Student Number: 20151631
 
 - ## adding the new icon to the application
 ### 1.choose this
